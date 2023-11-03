@@ -2,7 +2,7 @@
 
 // Infinte loop for playing again
 mainLoop: while (true) {
-   let guesses = 5; // Variable for amoun of guesses left
+   let guesses = 7; // Variable for amoun of guesses left
    let randomNumber = Math.floor(Math.random() * 100) + 1; // Generate random number between 1-100
    let userGuess;
 
