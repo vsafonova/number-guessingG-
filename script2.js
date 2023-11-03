@@ -1,7 +1,7 @@
 'use strict'
 
 // Infinte loop for playing again
-mainloop: while (true) {
+mainLoop: while (true) {
    let guesses = 5; // Variable for amoun of guesses left
    let randomNumber = Math.floor(Math.random() * 100) + 1; // Generate random number between 1-100
    let userGuess;
@@ -15,7 +15,7 @@ mainloop: while (true) {
       userGuess = Number(userInput);
 
       if (userInput === null) {
-         break mainloop;
+         break mainLoop;
       }
 
       if (userGuess === randomNumber) {
