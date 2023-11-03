@@ -16,18 +16,21 @@ mainLoop: while (true) {
 
       if (userInput === null) {
          break mainLoop;
-      }
+      } 
 
-      if (userGuess === randomNumber) {
-         alert('Congratulations! You guessed the correct number!');
-         break;
-      } else if (userGuess < randomNumber) {
-         alert('Too low. Try again!');
-      } else if (userGuess > randomNumber) {
-         alert('Too high. Try again!');
+      if(!isNaN(userGuess)) {
+         if (userGuess === randomNumber) {
+            alert('Congratulations! You guessed the correct number!');
+            break;
+         } else if (userGuess < randomNumber) {
+            alert('Too low. Try again!');
+         } else if (userGuess > randomNumber) {
+            alert('Too high. Try again!');
+         }
+         guesses -= 1;
+      } else {
+         alert('Please enter a valid number.');
       }
-
-      guesses -= 1;
    }
    
       let answer = confirm('Play again?');
