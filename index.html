@@ -1,11 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Number guessing game</title>
-</head>
-<body>
-   <script src="script2.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number guessing game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;0,700;1,400;1,600;1,700&family=Open+Sans:ital,wght@1,300&family=Oswald:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Number quessing game</h1>
+        <div class="theme">
+          <label class="toggle_label">
+            <input type="checkbox" id="mode" class="toggle" />
+            <span class="slider round">
+              <i class="fa-solid fa-moon fa-lg fa-spin moon"></i>
+              <i class="fa-solid fa-sun fa-spin fa-lg sun"></i>
+            </span>
+          </label>
+          <p id="theme"></p>
+        </div>
+      </header>
+      <main class="main">
+        <section class="section">
+          <div class="img__wrapper">
+            <img
+              src="./images/image.jpg"
+              class="image"
+              alt="Number guessing game"
+              id="image"
+            />
+          </div>
+          <div class="game">
+            <div id="congratulations">
+              Congratulations! You guessed the correct number!
+            </div>
+            <div class="instructions" id="instructions">
+              <h2 class="heading">Instructions:</h2>
+              <p>
+                Try to guess the number between 1-100 and input a number in the
+                field.
+              </p>
+              <p>
+                The game will tell you whether your guessed number is too high
+                or too low.
+              </p>
+              <div class="tooltip">
+                <div class="hint">*Hint</div>
+                <div class="tooltiptext">
+                  To guess faster, use binary search.
+                </div>
+              </div>
+            </div>
+            <div id="gamefield" class="gamefield">
+              <p class="tries" id="tries">You have 7 tries.</p>
+              <form class="form" id="form">
+                <input
+                  required
+                  name="userGuess"
+                  class="form__input"
+                  type="number"
+                  placeholder="Input a number here"
+                  min="1"
+                  max="100"
+                  id="userGuess"
+                />
+                <div class="form__buttons">
+                  <button type="submit" class="button" id="guess">Guess</button>
+                  <button type="button" class="button" id="cancel">
+                    Cancel
+                  </button>
+                </div>
+              </form>
+            </div>
+            <button type="button" class="button" id="playagain">
+              Play again?
+            </button>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <h2 class="footer__heading">Contacts</h2>
+        <p class="name">Viktoriia Safonova</p>
+        <div class="footer__networks">
+          <div class="networks__link">
+            <a href="https://github.com/vsafonova" target="_blank"
+              ><img
+                class="networks__image"
+                src="./images/github.svg"
+                alt="GitHub icon "
+            /></a>
+          </div>
+          <div class="networks__link">
+            <a
+              href="https://www.linkedin.com/in/viktoriia-safonova-a399291a3/"
+              target="_blank"
+              ><img
+                class="networks__image"
+                src="./images/linkedIn.svg"
+                alt="LinkedIn icon"
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="script3.js"></script>
+  </body>
 </html>
