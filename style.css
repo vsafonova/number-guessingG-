@@ -35,20 +35,9 @@ body {
 }
 
 .section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   margin-top: 2rem;
   margin-bottom: 1rem;
   border: 5px black solid;
-}
-
-@media (min-width: 1200px) {
-  .section {
-    flex-direction: row;
-    border: none;
-    justify-content: center;
-  }
 }
 
 /* Components */
@@ -76,7 +65,7 @@ body {
   visibility: hidden;
 }
 
-.toggle_label {
+.toggle__label {
   position: relative;
   display: inline-block;
   width: 100px;
@@ -137,23 +126,22 @@ body {
 }
 
 .tooltip {
-   cursor: pointer;
-   color: red;
-   font-style: italic;
-   font-size: 1rem;
-   
+  cursor: pointer;
+  color: red;
+  font-style: italic;
+  font-size: 1rem;
 }
 
 .tooltiptext {
-   display: none;
+  display: none;
 }
 
 .tooltip:hover .tooltiptext {
-   display: block;
+  display: block;
 }
 
 .tooltip:hover .hint {
-   display: none;
+  display: none;
 }
 
 .tries {
@@ -163,10 +151,10 @@ body {
 }
 
 .gamefield {
-   display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
 }
 
 .form {
@@ -220,6 +208,20 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 1200px) {
+  .section {
+    flex-direction: row;
+    border: none;
+    justify-content: center;
+  }
 }
 
 .footer {
