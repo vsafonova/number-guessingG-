@@ -20,7 +20,7 @@ const congratsEl = document.querySelector("#congratulations");
 resetGame(); //Initialize game
 
 //Generate random number between 1-100
-function setRundomNumber() {
+function setRandomNumber() {
   randomNumber = Math.floor(Math.random() * 100) + 1;
   console.log(randomNumber);
 }
@@ -80,7 +80,7 @@ function decreaseCounter() {
 
 // After click on "cancel" abort the game even if I still have tries
 function resetGame() {
-  setRundomNumber();
+  setRandomNumber();
   setGuesses(7);
 
   playAgainButtonEl.style.display = "none";
